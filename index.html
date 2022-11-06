@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <h3 class="section-heading">QR Code Generator</h3>
+            <p class="section-description">Create your QR code</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <form id="qr-form" class="six columns">
+                        <label for="url">Your URL:</label>
+                        <input id="url" type="url" placeholder="https://" class="u-full-width" required />
+                        <label for="color">Select color</label>
+                        <select class="u-full-width" name="color" id="color">
+                            <option value="#000000" selected>black</option>
+                            <option value="#f6378f">pink</option>
+                            <option value="#5b70f3">blue</option>
+                            <option value="#17b794">green</option>
+                            <option value="#c82121">red</option>
+                        </select>
+                        <label for="size">Select size</label>
+                        <select class="u-full-width" name="size" id="size">
+                            <option value="200" selected>200x200</option>
+                            <option value="300">300x300</option>
+                            <option value="400">400x400</option>
+                        </select>
+                        <input class="button-primary" type="submit" value="Generate QR Code">
+                    </form>
+                </div>
+                <div class="six columns qr-code">
+                    <div id="qrcode"></div>
+                    <div id="download-btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
